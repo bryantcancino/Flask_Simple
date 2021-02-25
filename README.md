@@ -23,7 +23,7 @@ docker run -p 5001:5001 flask_simple:0.1
 En la raiz ejecutar los siguientes comandos:
 
 ```shell
-python3 /web/app.py 
+python3 web/app.py 
 ```
 
 
