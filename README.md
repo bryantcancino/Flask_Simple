@@ -1,11 +1,10 @@
 # Flask Simple
 
-Prueba de concepto de un servicio en Flask
+Prueba de concepto de un servicio con Flask
 
 ## Requisitos
 
 1. Docker
-o
 1. Flask 1.1.1
 2. Python 3.6
 
