@@ -29,6 +29,10 @@ python3 web/app.py
 
 ## Ejecutar la prueba unitaria
 
+Render HTML:
+```shell
+curl --location --request GET 'http://localhost:5001/'
+```
 
 Traer los productos ejecutando el siguiente Curl:
 ```shell

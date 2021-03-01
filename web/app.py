@@ -1,13 +1,17 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import json
 from products import products
 
 
 app = Flask(__name__)
 
-# Testing Route
 @app.route('/', methods=['GET'])
-def ping():
+def render():
+  return render_template('index.html')
+
+# Testing Route
+@app.route('/start', methods=['GET'])
+def start():
     return jsonify({'response': 'Start!'})
 
 # Get Data Routes

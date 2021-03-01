@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+    function httpGetAsync(theUrl, callback) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+    httpGetAsync('http://0.0.0.0:5001/products', function(response) {
+        document.querySelector('#products').innerHTML = response
+            .replace(/\n( *)/g, function (match, p1) {
+                return '<br>' + '&nbsp;'.repeat(p1.length);
+            });
+    } )
+</script>
+</head>
+<body>
+
+<H1>
+    Flask_simple start!
+</H1>
+
+<p id="products"></p>
+
+</body>
+</html>
